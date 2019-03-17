@@ -17,6 +17,7 @@ export const appRoutes: Routes = [
      path: '',
      runGuardsAndResolvers: 'always',
      canActivate: [AuthGuard],
+    //  canDeactivate: [PreventUnsavedChanges],
      children: [
          {path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
          {path: 'members/:id', component: MemberDetailComponent, resolve: {user: MemberDetailResolver}},
